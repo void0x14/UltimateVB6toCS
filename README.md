@@ -55,7 +55,7 @@ COM libraries with no known .NET mapping get a `<COMReference>` entry in the `.c
 
 ### Requirements
 
-- .NET 8 SDK
+- .NET 8 SDK -> .NET 10'a yukseltılecek modernlestırme // todo
 - `Option Explicit` is **required** in every source file. Files without it are rejected with a clear error — add it to the top of the file and re-run.
 
 ## Current status
@@ -241,7 +241,7 @@ samples/
 - **`Select Case`:** mapped to C# `switch`; VB6 `Is` comparisons and range patterns supported
 - **`For Each` over collections:** `.Values` appended automatically when iterating a `Dictionary`
 
-## Known limitations
+## Known limitations (mumkun oldugunca cogu duzeltılmeye calısılacak todo)
 
 - **COM type accuracy:** indexed COM members (e.g. `ADODB.Fields(i)`) are identified via a static lookup table (`ComTypeMap.cs`) covering ADODB, DAO, and MSXML. COM types not in the table fall back to method-call syntax and may need manual adjustment.
 - **`ref`/`out` parameters on COM methods:** resolved statically for known types; unknown COM method parameters default to `ref`.
